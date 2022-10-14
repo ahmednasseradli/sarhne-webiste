@@ -1,0 +1,878 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: url("../fonts/cairo/CairoFont.ttf");
+    font-family: 'Cairo', Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+h1 {
+
+    padding: 15px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+img {
+    border-radius: 100%;;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar reversing in expanded */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+
+        flex-direction: row-reverse;
+    }
+}
+
+
+.send-page {
+    margin:100px auto;
+
+}
+
+.send-page .sendmsg {
+    max-width: 600px!important;
+    padding: 20px 10px;
+    background-color: #2e2f30;
+    border-radius: 5px;
+    margin: auto;
+
+}
+
+.send-page #user-img {
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border: solid 5px #dc3545;
+    /* box-shadow: rgb(138 140 141 / 90%) 0px 2px 8px 0px; */
+}
+
+.send-page .sendmsg h5 {
+    padding: 10px;
+    margin: 10px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.send-page .sendmsg .user-about {
+
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.send-page #message {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 10px;
+    border: solid 2px #eee;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.send-page #message:focus {
+    border: unset;
+    outline: solid 2px #dc3545;
+}
+
+
+.send-page #send-button {
+    width: 100%;
+    padding: 10px 30px;
+    border:unset;
+    border-radius: 5px;
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.send-page .public-messages {
+
+    max-width: 600px;
+    padding: 20px 10px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #2e2f30;
+    color: #ffffff;
+}
+
+.send-page .public-messages .no-messages {
+
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.send-page .public-messages .no-messages > p{
+
+    font-size: 20px;
+}
+
+.send-page .public-messages p > span {
+
+    color: #dc3545;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.send-page .public-messages h3 {
+
+    text-align: center;
+}
+
+
+.send-page .signup-now {
+
+    max-width: 600px;
+    margin: 10px auto;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #2e2f30;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.send-page .signup-now > span {
+
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.send-page .signup-now > p {
+
+    max-width: 400px;
+    margin: auto;
+}
+.send-page .signup-now > a {
+
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #dc3545;
+    outline: none;
+}
+
+/* Home page*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    /* background-color: transparent !important; */
+
+}
+
+.home > .bk-transparent {
+
+    background-color: transparent !important;
+}
+
+.background {
+
+    width: 100%;
+    height: 100vh;
+    background-image: url("../imgs/site/cover.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.background .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2d2f31;
+    opacity: .9;
+}
+
+.background .overlay .home-info {
+
+    max-width: 500px;
+    height: 100%;
+    margin: 50px auto;
+    padding: 100px 10px;
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.background .overlay .home-info h1 {
+
+    font-size: 60px;
+}
+@media (max-width: 587px) {
+    
+    .background .overlay .home-info h1 {
+
+        font-size: 40px;
+    }
+
+}
+.background .overlay .home-info p {
+
+    padding: 20px 0;
+    text-align: center;
+}
+.background .overlay .home-info .signin-up {
+
+    text-align: center;
+}
+.background .overlay .home-info .signin-up > .btn {
+
+    margin: 0px 10px;
+}
+
+.background .overlay .home-info .signin-up > .btn a {
+
+    color: unset;
+}
+
+.explanning {
+    padding: 50px 0;
+}
+
+
+.explanning .media {
+    margin: 15px 0;
+    
+}
+
+
+.explanning .media img{
+    max-height: 100px
+
+}
+
+.explanning p{
+    color: #666666;
+    padding: 0 5px;
+
+}
+
+.how-to-use {
+
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.how-to-use p{
+
+    max-width: 500px;
+    margin: auto;
+    color: #7c7c7c;
+    text-align: center;
+    line-height: 2
+}
+
+/* App Downloading Section  */
+.app-download {
+    color: #ffffff;
+    background-color: #2e2f30;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.app-download p {
+
+    max-width: 500px;
+    margin: auto;
+    color: #e1e1e1;
+    text-align: center;
+    line-height: 2
+}
+
+.download-stores {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Section */
+.footer {
+
+    background-color: #2e2f30;
+    color: white;
+    text-align: center;
+}
+.footer a {
+
+    color: unset;
+    font-size: 22px;
+}
+
+.footer .social-links a {
+
+    font-size: 24px;
+    margin: 5px;
+}
+
+/*********************************************************/
+/********************* Call Us Page *********************/
+/*********************************************************/
+
+.call-us {
+    margin: 100px 0;
+}
+
+.call-us .call-info {
+
+    text-align: center;
+}
+
+.call-us .call-info span,
+.call-us .call-info h2{
+
+    font-size: 40px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.call-us .call-info .help-box {
+
+    max-width: 600px;
+    padding: 30px 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: #2d2f31;
+    color: white;
+}
+
+.call-us .call-info .help-box p {
+
+    padding: 10px 5px;
+    font-size: 18px;
+}
+
+.call-us .call-info .help-box h5 {
+
+    font-weight: bold;
+}
+
+.call-us .call-info .help-box a {
+
+    font-size: 24px;
+    color: #dc3545;
+}
+
+
+/*********************************************************/
+/********************* Login Page *********************/
+/*********************************************************/
+
+.login-page {
+    margin-top: 100px;
+}
+
+.login-page .direct-login {
+
+    max-width: 600px;
+    background-color: #2e2f30;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+.login-page .direct-login h3 {
+
+    color: white;
+    padding-bottom: 15px;
+}
+.login-page .direct-login .btn {
+
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.login-page .direct-login .btn a {
+
+    color: unset;
+}
+/* Login Page*/
+.login-page .login-form {
+    background-color: #2e2f30;
+    max-width: 600px!important;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 20px;
+    color: white;
+
+}
+
+.login-page .login-form .use-rules,
+.login-page .login-form .privacy-policy {
+    
+    color: #dc3545;
+}
+.login-page .login-form input {
+
+    padding: 10px;
+ }
+
+.login-page .login-form button {
+
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+/*********************************************************/
+/********************* signup Page *********************/
+/*********************************************************/
+
+.signup-page {
+    margin-top: 100px;
+}
+
+.signup-page .direct-signup {
+
+    max-width: 600px;
+    background-color: #2e2f30;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+.signup-page .direct-signup h3 {
+
+    color: white;
+    padding-bottom: 15px;
+}
+.signup-page .direct-signup .btn {
+
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+/* signup Page*/
+.signup-page .signup-form {
+    background-color: #2e2f30;
+    max-width: 600px!important;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 20px;
+    color: white;
+
+}
+
+.signup-page .signup-form .use-rules,
+.signup-page .signup-form .privacy-policy {
+
+    color: #dc3545;
+}
+.signup-page .signup-form input {
+
+    padding: 10px;
+ }
+
+.signup-page .signup-form button {
+
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+/*********************************************************/
+/********************* Instructions Page *****************/
+/*********************************************************/
+
+.instructs-page {
+
+    margin-top: 100px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.instructs-page span,
+.instructs-page h2{
+
+    font-size: 40px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.instructs-page .instructs-box {
+
+    max-width: 600px;
+    padding: 30px 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: #2d2f31;
+    color: white;
+    
+}
+
+.instructs-page .instructs-box .instruction {
+
+    margin: 10px 0;
+
+}
+
+.instructs-page .instructs-box .instruction > .btn {
+
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background-color: #dc3545;
+    border: 0;
+    
+}
+
+.instructs-page .instructs-box .instruction .card {
+
+    border-radius: 0 0 10px 10px;
+    background-color: #d66f60;
+    color: white;
+
+}
+/*********************************************************/
+/********************* Settings Page *********************/
+/*********************************************************/
+
+.settings-page {
+
+    margin-top: 100px;
+    
+}
+
+
+
+.settings-page .user-info {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.settings-page h2 {
+
+    text-align: center;
+    color: #dc3545;
+
+}
+.settings-page .controls {
+
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2f30;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+.settings-page .controls > div {
+
+    width: calc(100%/3);
+    text-align: center;
+
+}
+.settings-page .controls > div:hover > a{
+
+    background-color: #ffffff;
+    border: solid 2px #2e2f30;
+    color: #dc3545;
+
+}
+
+.settings-page .controls > div > a{
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: #fff;
+    border: solid 2px #2e2f30;
+    border-radius: 5px;
+
+}
+
+
+.settings-page .settings {
+
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    background-color: #2e2f30;
+    border-radius: 5px;
+}
+
+.settings-page #account-settings {
+
+    display: none;
+}
+
+.settings-page #account-settings .password-errors,
+.settings-page #account-settings .social-errors {
+
+    display: none;
+}
+.settings-page #image-settings {
+
+    display: none;
+}
+.settings-page #image-settings .user-img > img {
+
+    border: solid 5px #dc3545;
+}
+
+.settings-page .settings .profile,
+.settings-page .settings .change-img,
+.settings-page .settings .change-password {
+
+    color: #ffffff;
+    text-align: center;
+}
+
+.settings-page .settings span {
+    display: block;
+    color: #ffffff;
+}
+
+.settings-page .settings .submit-btn {
+
+    display: block;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: unset;
+}
+
+.settings-page .social-links {
+    
+    
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    background-color: #2e2f30;
+    border-radius: 5px;    
+}
+
+.settings-page .social-links h3 {
+
+    color: #ffffff;
+    text-align: center;
+}
+
+.settings-page .social-links form input {
+
+    position: relative;
+}
+
+.settings-page .social-links .submit-btn {
+
+    display: block;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: unset;
+}
+/* Active class */
+.settings-page .controls .active > a{
+
+    background-color: #ffffff;
+    border: solid 2px #2e2f30;
+    color: #dc3545;
+}
+/*********************************************************/
+/********************* Messages Page *********************/
+/*********************************************************/
+.messages-page{
+    margin-top: 100px;
+}
+
+.messages-page .user-info {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    background-color: #2e2f30;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.user-info .user-name {
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-info .user-img {
+
+    border-radius: 100%;
+    overflow: hidden;
+    border: solid 5px #dc3545;
+}
+
+.user-info .share-buttons > .btn {
+    max-width: 100px;
+    background-color: white;
+    border-color: #dc3545;
+    color: #dc3545;
+}
+.user-info .share-buttons > .btn:hover {
+
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #ffffff;
+}
+.user-info .share-buttons > .btn a {
+    color: unset;
+    font-weight: unset;
+}
+
+/* Messages Section */
+
+.messages-container {
+    
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 20px 0;
+    background-color: #2e2f30;
+    border-radius: 10px;
+}
+.msg-count {
+    max-width: 600px;
+    color: #dc3545;
+    margin: auto;
+}
+
+.messages-container .no-messages{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.messages-container .no-messages > p{
+
+    font-size: 24px;
+}
+
+.messages-container .row, .container-xs, .container-xs .row {
+
+    height: 100% !important;
+    width: 100%;
+    margin: 0;
+}
+
+.messages-container .container-xs .sender-img {
+
+    border: solid 2px #dc3545;
+}
+
+.msg-container {
+
+    position: relative;
+    min-height: 100px;
+    /* border: solid 2px #dc3545; */
+    padding: 10px;
+    border-radius:15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #dc3545;
+
+    
+}
+
+.msg-container::after {
+
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    right: -4px;
+    background-color: #dc3545;
+    transform: rotateZ(45deg);
+
+}
+
+.msg-container .msg-content {
+
+    color: white;
+}
+
+.msg-container .msg-date {
+    /* position: absolute;
+    bottom: 10px;
+    right: 20px; */
+    font-size: 12px;
+    color: white;
+}
+
+.msg-container .msg-controls {
+    
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+
+.msg-container .msg-controls > button {
+
+    font-size: 12px;
+    color: #dc3545;
+    margin:2px;
+    padding: 5px;
+    background-color: #ffffff;
+}
